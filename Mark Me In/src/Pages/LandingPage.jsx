@@ -2,8 +2,13 @@ import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { CheckCircle, MapPin, ShieldCheck, BarChart3, Smartphone } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
+import poster from "../assets/poster.png"
 export default function MarkMeInLanding() {
+  const navigation = useNavigate();
+  const handleLoginAsEmployee =()=>{
+      navigation("/employeeLogin");
+  }
   return (
     <div className="font-sans text-gray-800">
       {/* Hero Section */}
@@ -23,8 +28,8 @@ export default function MarkMeInLanding() {
               transparency, and security.
             </p>
             <div className="mt-8 flex gap-4">
-              <button className="bg-white text-indigo-600 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
-                Request Demo
+              <button onClick={handleLoginAsEmployee} className="bg-white text-indigo-600 px-6 py-3 rounded-2xl font-semibold shadow-lg hover:scale-105 transition">
+                Login as Employee
               </button>
               <button className="border border-white px-6 py-3 rounded-2xl font-semibold hover:bg-white hover:text-indigo-600 transition">
                 Learn More
@@ -36,7 +41,7 @@ export default function MarkMeInLanding() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            src="https://images.unsplash.com/photo-1556742400-b5a74d3b67f5"
+            src={poster}
             alt="Geo Attendance"
             className="rounded-2xl shadow-2xl"
           />
@@ -168,6 +173,7 @@ export default function MarkMeInLanding() {
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-10 text-center">
         <p>© {new Date().getFullYear()} Digital Tech Eye. All Rights Reserved.</p>
+        
       </footer>
     </div>
   );

@@ -6,6 +6,7 @@ const EmployeeDashboard = () => {
   const [employee, setEmployee] = useState(JSON.parse(localStorage.getItem("employee")) || null);
   const [lat, setLat] = useState(null);
   const [lng, setLng] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [locationError, setLocationError] = useState("");
   const [attendanceMessage, setAttendanceMessage] = useState("");
   const [isLoading , setIsLoading] = useState(false);

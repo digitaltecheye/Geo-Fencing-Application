@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<MarkMeInLanding/>} />
         <Route path="/employeeLogin" element={<EmployeeLoginPage />} />
         <Route path="/employee/dashboard" element={<EmployeeDashboard />} />
+         {/* <Route path="*" element={<MarkMeInLanding/>} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
      </BrowserRouter>
