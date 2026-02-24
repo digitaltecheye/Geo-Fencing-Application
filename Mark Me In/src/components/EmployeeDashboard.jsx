@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import API_URL from "../config/ApiCall";
+import { useNavigate } from "react-router-dom";
 
 const EmployeeDashboard = () => {
   const [employee, setEmployee] = useState(JSON.parse(localStorage.getItem("employee")) || null);
@@ -11,7 +12,7 @@ const EmployeeDashboard = () => {
   const [attendanceMessage, setAttendanceMessage] = useState("");
   const [isLoading , setIsLoading] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(false);
-
+  const navigation = useNavigate()
   useEffect(()=>{
     const fetchSubscriptionStatus = async () => {
         setIsLoading(true);
@@ -108,7 +109,7 @@ const EmployeeDashboard = () => {
             <button onClick={() => {
                 localStorage.removeItem("token");
                 localStorage.removeItem("employee");
-                window.location.href = "/employeeLogin";
+                navigation("/employeeLogin");
             }} style={{...styles.button, backgroundColor: "#dc3545"}}>
                 Logout
             </button>
