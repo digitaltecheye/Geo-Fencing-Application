@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, MapPin, ShieldCheck, BarChart3, Smartphone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import poster from "../assets/poster.png"
+import poster from "../assets/Poster.png"
 export default function MarkMeInLanding() {
   const navigation = useNavigate();
   const handleLoginAsEmployee =()=>{
