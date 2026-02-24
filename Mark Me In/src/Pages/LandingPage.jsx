@@ -3,10 +3,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, MapPin, ShieldCheck, BarChart3, Smartphone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import poster from "../assets/Poster.png"
-import screenshot1 from "../assets/screenshot1.png"
-import screenshot2 from "../assets/screenshot2.jpg"
-import screenshot3 from "../assets/screenshot3.jpg"
+import poster from "../assets/Poster.png";
+import screenshot1 from "../assets/screenshot1.png";
+import screenshot2 from "../assets/screenshot2.jpg";
+import screenshot3 from "../assets/screenshot3.jpg";
 export default function MarkMeInLanding() {
   const arrScreenshots = [screenshot1, screenshot2, screenshot3];
   const navigation = useNavigate();
