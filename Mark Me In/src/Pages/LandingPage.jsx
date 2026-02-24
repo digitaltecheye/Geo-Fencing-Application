@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import { CheckCircle, MapPin, ShieldCheck, BarChart3, Smartphone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import poster from "../assets/Poster.png"
+import screenshot1 from "../assets/screenshot1.png"
+import screenshot2 from "../assets/screenshot2.jpg"
+import screenshot3 from "../assets/screenshot3.jpg"
 export default function MarkMeInLanding() {
+  const arrScreenshots = [screenshot1, screenshot2, screenshot3];
   const navigation = useNavigate();
   const handleLoginAsEmployee =()=>{
       navigation("/employeeLogin");
@@ -128,11 +132,11 @@ export default function MarkMeInLanding() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((item) => (
+            {arrScreenshots.map((item) => (
               <motion.img
                 key={item}
                 whileHover={{ scale: 1.05 }}
-                src={`https://source.unsplash.com/600x400/?technology,app,${item}`}
+                src={`${item}`}
                 alt="App Screenshot"
                 className="rounded-2xl shadow-lg"
               />
